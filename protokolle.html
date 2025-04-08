@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clan Friendship – Protokolle</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Clan "Friendship" – Protokolle</h1>
+  </header>
+  <nav>
+    <a href="index.html">Start</a>
+    <a href="news.html">News</a>
+    <a href="protokolle.html">Protokolle</a>
+    <a href="satzung.html">Satzung</a>
+    <a href="aenderungsantraege.html">Änderungsanträge</a>
+    <a href="claninfo.html">Clan-Info</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+  <main>
+    <h2>📋 Hochgeladene Protokolle</h2>
+
+    <!-- Dropdown-Menü zur Auswahl von Protokollen -->
+    <label for="protokollSelect">Wählen Sie ein Protokoll:</label>
+    <select id="protokollSelect">
+      <option value="protokoll1">Protokoll Nr. 01 vom 08.04.2025</option>
+      <option value="protokoll2">Protokoll Nr. 02 vom 08.04.2025</option>
+      <!-- Weitere Protokolle können hier hinzugefügt werden -->
+    </select>
+    <br><br>
+
+    <h3>Download Protokolle:</h3>
+    <div class="protokolle-list">
+      <ul>
+        <li><a href="protokolle/20250408_Clan_Protokoll_01.pdf" target="_blank">Protokoll Nr. 01 vom 08.04.2025</a></li>
+        <li><a href="protokolle/20250408_Clan_Protokoll_02.pdf" target="_blank">Protokoll Nr. 02 vom 08.04.2025</a></li>
+        <!-- Weitere Protokolle können hier hinzugefügt werden -->
+      </ul>
+    </div>
+
+    <h3>Protokoll hochladen:</h3>
+    <!-- Formular zum Hochladen eines neuen Protokolls -->
+    <form action="/upload_protokoll" method="POST" enctype="multipart/form-data">
+      <label for="protokollFile">Wählen Sie ein Protokoll zum Hochladen:</label>
+      <input type="file" id="protokollFile" name="protokollFile" accept="application/pdf" required>
+      <br><br>
+      <button type="submit">Protokoll hochladen</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Clan Friendship | Dokumentation mit System</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

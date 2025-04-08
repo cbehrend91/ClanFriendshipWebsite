@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clan Friendship – Änderungsanträge</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Clan "Friendship" – Änderungsanträge</h1>
+  </header>
+  <nav>
+    <a href="index.html">Start</a>
+    <a href="news.html">News</a>
+    <a href="protokolle.html">Protokolle</a>
+    <a href="satzung.html">Satzung</a>
+    <a href="aenderungsantraege.html">Änderungsanträge</a>
+    <a href="claninfo.html">Clan-Info</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+  <main>
+    <h2>🗳️ Übersicht genehmigter Anträge</h2>
+    <div class="antrag">
+      <h3>Antrag #01/2025 – BlockDamagePlayer erhöhen</h3>
+      <p><strong>Datum:</strong> 08.04.2025</p>
+      <p><strong>Status:</strong> Einstimmig genehmigt</p>
+      <p><strong>Inhalt:</strong> Die Standardgrenze von BlockDamagePlayer (100) wurde per Serverhost auf 300 erhöht. Neuer Wert: 150.</p>
+    </div>
+
+    <h2>📄 Änderungsanträge</h2>
+
+    <!-- Dropdown-Menü zur Auswahl von Änderungsanträgen -->
+    <label for="aenderungsantragSelect">Wählen Sie einen Änderungsantrag:</label>
+    <select id="aenderungsantragSelect">
+      <option value="aenderungsantrag1">Änderungsantrag Nr. 01 vom 08.04.2025</option>
+      <option value="aenderungsantrag2">Änderungsantrag Nr. 02 vom 08.04.2025</option>
+      <!-- Weitere Änderungsanträge können hier hinzugefügt werden -->
+    </select>
+    <br><br>
+
+    <h3>Download Änderungsanträge:</h3>
+    <div class="aenderungsantraege-list">
+      <ul>
+        <li><a href="aenderungsantraege/20250408_Clan_Aenderungsantrag_01.pdf" target="_blank">Änderungsantrag Nr. 01 vom 08.04.2025</a></li>
+        <li><a href="aenderungsantraege/20250408_Clan_Aenderungsantrag_02.pdf" target="_blank">Änderungsantrag Nr. 02 vom 08.04.2025</a></li>
+        <!-- Weitere Änderungsanträge können hier hinzugefügt werden -->
+      </ul>
+    </div>
+
+    <h3>Änderungsantrag hochladen:</h3>
+    <!-- Formular zum Hochladen eines neuen Änderungsantrags -->
+    <form action="/upload_aenderungsantrag" method="POST" enctype="multipart/form-data">
+      <label for="aenderungsantragFile">Wählen Sie einen Änderungsantrag zum Hochladen:</label>
+      <input type="file" id="aenderungsantragFile" name="aenderungsantragFile" accept="application/pdf" required>
+      <br><br>
+      <button type="submit">Änderungsantrag hochladen</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Clan Friendship | Änderungsarchiv</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
